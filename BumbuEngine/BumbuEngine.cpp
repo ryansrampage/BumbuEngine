@@ -1,19 +1,59 @@
-// BumbuEngine.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "BumbuEngine.h"
 
-#include <iostream>
-
-int main() {
-    std::cout << "Hello World!\n";
+BumbuEngine::BumbuEngine()
+	:m_running { true }
+{
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+int BumbuEngine::Execute()
+{
+	if (Init() == false)
+	{
+		return -1;
+	}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+	while (!GRAPHICS->ShouldWindowClose())
+	{
+		//Input
+		INPUT->processInput(GRAPHICS->GetWindow());
+		//Time (for now it can be event based (I'm lazy))
+		
+		//rendering commands
+		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+
+		//check and call events and swap the buffers
+		glfwSwapBuffers(GRAPHICS->GetWindow());
+		glfwPollEvents();
+	}
+
+	//Cleanup
+	Cleanup();
+	return 0;
+}
+
+bool BumbuEngine::Init()
+{
+	//Input init?
+	if (!GRAPHICS->InitOpenGL())
+	{
+		return false;
+	}
+
+	return true;
+}
+
+void BumbuEngine::Cleanup()
+{
+	glfwTerminate();
+}
+
+void BumbuEngine::Quit()
+{
+	m_running = false;
+}
+
+bool BumbuEngine::GetRunning()
+{
+	return m_running;
+}

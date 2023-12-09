@@ -13,7 +13,8 @@ public:
 	static GraphicsEngine* instance();
 	bool InitOpenGL();
 	GLFWwindow* GetWindow();
-	int Terminate();
+	void SetWindowToClose();
+	int ShouldWindowClose();
 };
 
 #define GRAPHICS GraphicsEngine::instance()

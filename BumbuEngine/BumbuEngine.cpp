@@ -12,7 +12,7 @@ int BumbuEngine::Execute()
 		return -1;
 	}
 
-	while (!glfwWindowShouldClose(GRAPHICS->GetWindow()))
+	while (!GRAPHICS->ShouldWindowClose())
 	{
 		//Input
 		INPUT->processInput(GRAPHICS->GetWindow());

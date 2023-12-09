@@ -41,6 +41,16 @@ GLFWwindow* GraphicsEngine::GetWindow()
     return m_window;
 }
 
+void GraphicsEngine::SetWindowToClose()
+{
+    glfwSetWindowShouldClose(m_window, true);
+}
+
+int GraphicsEngine::ShouldWindowClose()
+{
+    return glfwWindowShouldClose(m_window);
+}
+
 void GraphicsEngine::OnWindowResize(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);

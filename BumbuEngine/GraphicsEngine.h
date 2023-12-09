@@ -13,6 +13,7 @@ public:
 	static GraphicsEngine* instance();
 	bool InitOpenGL();
 	GLFWwindow* GetWindow();
+	int Terminate();
 };
 
 #define GRAPHICS GraphicsEngine::instance()

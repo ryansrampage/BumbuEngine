@@ -30,7 +30,6 @@
 *.app
 
 # Custom Additions
-*.vcxproj*
 *.vs*
 *.ilk
 *.log

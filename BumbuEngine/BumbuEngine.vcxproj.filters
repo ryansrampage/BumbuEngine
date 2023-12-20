@@ -21,6 +21,9 @@
     <ClCompile Include="src\BumbuEngine\Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\BumbuEngine\Log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BumbuEngine\Core.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\BumbuEngine\EntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BumbuEngine\Log.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

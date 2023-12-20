@@ -1,0 +1,3 @@
+[submodule "BumbuEngine/vendor/spdlog"]
+	path = BumbuEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog

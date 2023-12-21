@@ -4,6 +4,9 @@
     <Filter Include="BumbuEngine">
       <UniqueIdentifier>{96F9A607-02AF-1FFD-8BA3-19D4F7571601}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BumbuEngine\Events">
+      <UniqueIdentifier>{BA40FD72-A624-BEC8-0F85-B81BFB87A84A}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\BumbuEngine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\BumbuEngine\EntryPoint.h">
       <Filter>BumbuEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BumbuEngine\Events\ApplicationEvent.h">
+      <Filter>BumbuEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BumbuEngine\Events\Event.h">
+      <Filter>BumbuEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BumbuEngine\Events\KeyEvent.h">
+      <Filter>BumbuEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BumbuEngine\Events\MouseEvent.h">
+      <Filter>BumbuEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\BumbuEngine\Log.h">
       <Filter>BumbuEngine</Filter>

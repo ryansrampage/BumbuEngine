@@ -9,3 +9,5 @@
 #else
 	#error BumbuEngine only supports Windows!
 #endif // BE_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

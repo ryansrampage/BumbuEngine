@@ -30,7 +30,7 @@
 *.app
 
 # Custom Additions
-*.vs*
+*.vs/
 *.ilk
 *.log
 *.lastbuildstate
@@ -38,3 +38,7 @@
 *.recipe
 *.idb
 *.pdb
+
+# Binaries
+**/bin/
+bin-int/
